@@ -1,6 +1,9 @@
 <template>
-  <div>
+  <div class="basico">
     pagina inicio
+    <div class="basicodos">
+      basico dos
+    </div>
   </div>
 </template>
 

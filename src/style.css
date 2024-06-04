@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.basico {
+  @apply font-bebas underline text-4xl;
+  .basicodos {
+    @apply text-2xl;
+  }
+}
