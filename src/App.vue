@@ -8,17 +8,16 @@
   </p>
   <nav>
     <RouterLink to="/">Go to Home</RouterLink> &bull;
-    <RouterLink to="/hello">Go to About</RouterLink>
+    <RouterLink to="/hello">Go to About</RouterLink> &bull;
+    <RouterLink to="/tarea">Go to Tarea</RouterLink>
   </nav>
   <main>
 
-
     <router-view v-slot="{ Component }">
-      <transition name="fade">
-        <component :is="Component" />
+      <transition name="scale" mode="out-in">
+        <component :is="Component" :key="$route.path" />
       </transition>
     </router-view>
-
 
   </main>
 </template>
@@ -30,18 +29,6 @@ import { useMeta } from 'vue-meta'
 import { SEO_SITIO } from './seo.js';
 useMeta(SEO_SITIO)
 
-name: 'App'
-
 </script>
 
-<style lang="css" scoped>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s;
-}
-
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-}
-</style>
+<style scoped></style>

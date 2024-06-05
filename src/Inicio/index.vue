@@ -1,9 +1,11 @@
 <template>
-  <Canonical />
-  <div class="basico">
-    pagina inicio
-    <div class="basicodos">
-      basico dos
+  <div>
+    <Canonical></Canonical>
+    <div class="basico">
+      pagina inicio
+      <div class="basicodos">
+        basico dos
+      </div>
     </div>
   </div>
 </template>
@@ -17,4 +19,4 @@ useMeta(SEO_SITIO)
 
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped></style>

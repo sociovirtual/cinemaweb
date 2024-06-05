@@ -11,6 +11,11 @@ const routes = [
     name: "Hello",
     component: () => import("./components/HelloWorld.vue"),
   },
+  {
+    path: "/tarea",
+    name: "Tarea",
+    component: () => import("./Tarea/index.vue"),
+  },
 ];
 
 const router = createRouter({
