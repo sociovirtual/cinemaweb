@@ -7,21 +7,41 @@
     <strong class=" text-4xl underline font-bebas">Current route path:</strong> {{ $route.fullPath }}
   </p>
   <nav>
-    <RouterLink to="/">Go to Home</RouterLink>
+    <RouterLink to="/">Go to Home</RouterLink> &bull;
     <RouterLink to="/hello">Go to About</RouterLink>
   </nav>
   <main>
-    <RouterView />
+
+
+    <router-view v-slot="{ Component }">
+      <transition name="fade">
+        <component :is="Component" />
+      </transition>
+    </router-view>
+
+
   </main>
 </template>
 
 <script setup>
 
-// manejo del seo
+// manejo del SEO
 import { useMeta } from 'vue-meta'
 import { SEO_SITIO } from './seo.js';
 useMeta(SEO_SITIO)
 
+name: 'App'
+
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="css" scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>

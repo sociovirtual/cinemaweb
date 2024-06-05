@@ -1,5 +1,3 @@
-import router from "./router";
-
 const SEO_SITIO = {
   title: "Bienvenidos a Socio Virtual SPA",
   titleTemplate: "%s ",
@@ -24,7 +22,7 @@ const SEO_SITIO = {
   description:
     "Páginas web económicas. En diseño web somos conscientes, Sitios web básicos pero de excelente calidad, con diseño 100% a medida, especial para iniciar.",
   htmlAttrs: {
-    lang: "es-ES",
+    lang: "es",
     amp: false,
   },
   og: {
@@ -47,7 +45,6 @@ const SEO_SITIO = {
     site: "@sociovirtualspa",
   },
 
-  link: { rel: "canonical", href: $route.fullPath },
   sitemap: {
     path: "/sitemap.xml",
     gzip: true,
