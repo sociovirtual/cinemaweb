@@ -14,9 +14,13 @@
   <main>
 
     <router-view v-slot="{ Component }">
+
       <transition name="scale" mode="out-in">
-        <component :is="Component" :key="$route.path" />
+        <KeepAlive>
+          <component :is="Component" :key="$route.path" />
+        </KeepAlive>
       </transition>
+
     </router-view>
 
   </main>

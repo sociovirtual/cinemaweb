@@ -1,5 +1,5 @@
 {
-  "name": "viteweb",
+  "name": "cinemaweb",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -23,7 +23,7 @@
     "@vitejs/plugin-vue": "^5.0.5",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38",
-    "tailwindcss": "^3.4.3",
+    "tailwindcss": "^3.4.4",
     "vite": "^5.2.12"
   }
 }
