@@ -9,16 +9,16 @@
   <nav>
     <RouterLink to="/">Go to Home</RouterLink> &bull;
     <RouterLink to="/hello">Go to About</RouterLink> &bull;
-    <RouterLink to="/tarea">Go to Tarea</RouterLink>
+    <!-- <RouterLink to="/tarea">Go to Tarea</RouterLink> -->
   </nav>
   <main>
 
     <router-view v-slot="{ Component }">
 
       <transition name="scale" mode="out-in">
-        <KeepAlive>
-          <component :is="Component" :key="$route.path" />
-        </KeepAlive>
+
+        <component :is="Component" :key="$route.path" />
+
       </transition>
 
     </router-view>

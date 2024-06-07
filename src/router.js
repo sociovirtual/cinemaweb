@@ -12,9 +12,9 @@ const routes = [
     component: () => import("./components/HelloWorld.vue"),
   },
   {
-    path: "/tarea",
-    name: "Tarea",
-    component: () => import("./Tarea/index.vue"),
+    path: "/pelicula/:slug",
+    name: "Pelicula",
+    component: () => import("./pelicula/index.vue"),
   },
 ];
 

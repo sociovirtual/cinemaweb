@@ -23,3 +23,11 @@
   opacity: 0;
   transform: scale(0.9);
 }
+
+.mensaje-cargando {
+  @apply text-4xl font-alpha;
+}
+
+.mensaje-error {
+  @apply text-xl text-red-800 font-bebas;
+}

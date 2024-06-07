@@ -1,23 +1,23 @@
-// import { gql } from "@apollo/client/core";
-// import { gql } from "@apollo/client";
 import gql from "graphql-tag";
 
-const LISTA_CATEGORIA_TRABAJOS = gql`
-  {
-    categoriaTrabajos {
-      nodes {
-        id
-        description
-        name
-        categoriaTrabajoImagen {
-          node {
-            sourceUrl(size: THUMBNAIL)
-            sizes(size: THUMBNAIL)
-          }
+const PELICULAS_TODAS = gql`
+  query movie {
+    peliculas {
+      edges {
+        node {
+          id
+          cinemaClasificacionPublico
+          cinemaDuracion
+          cinemaFechaDesde
+          cinemaPoster(size: "large")
+          cinemaSlug
+          cinemaTitulo
+          slug
+          title(format: RENDERED)
         }
       }
     }
   }
 `;
 
-export { LISTA_CATEGORIA_TRABAJOS };
+export { PELICULAS_TODAS };
