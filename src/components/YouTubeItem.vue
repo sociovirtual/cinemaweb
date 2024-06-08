@@ -45,7 +45,7 @@ const youtubeEmbedUrl = computed(() => `https://www.youtube.com/embed/${props.ci
 
 <style>
 .youtube-imagen {
-  @apply cursor-pointer w-80 my-4;
+  @apply cursor-pointer w-80 my-4 shadow-2xl shadow-CinemaColorPelicula;
 }
 
 .modal-enter-active,

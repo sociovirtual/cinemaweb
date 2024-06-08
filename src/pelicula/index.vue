@@ -19,18 +19,26 @@
           <div class="pelicula-detalles">
             <div class="calificacion"> {{ result.peliculaBy.cinemaClasificacionPublico }} </div>
             <div class="duracion"> {{ result.peliculaBy.cinemaDuracion }} min </div>
+            <button class=" pelicula-boton   bg-blue-600  text-white focus:bg-blue-700  hover:bg-blue-700 ">
+              Comprar Entrada</button>
           </div>
 
           <YouTubeItem :cinemaTrailerThumbnail=result.peliculaBy.cinemaTrailerThumbnail
             :cinemaTrailerId="result.peliculaBy.cinemaTrailerId" />
 
-          <div class="pelicula-botones">
-            <button class="pelicula-boton   bg-red-600  text-white focus:bg-red-700  hover:bg-red-700 ">
-              Ver Trailer </button>
-            <button class=" pelicula-boton   bg-blue-600  text-white focus:bg-blue-700  hover:bg-blue-700 ">
-              Comprar Entrada</button>
-          </div>
+          <ul class="flex flex-wrap gap-4 my-8">
+            <li v-for="(horario, index) in result.peliculaBy.cinemaHorarios" :key="index">
 
+              <div
+                class="flex flex-col items-center rounded-lg bg-gray-100 px-4 py-2 border border-CinemaColorPelicula hover:scale-125 ">
+                <p class="text-xl font-medium text-CinemaColorPelicula  font-alpha ">{{ horario.formato }}</p>
+                <p class="text-3xl font-bold text-CinemaColorPelicula ">{{ horario.hora }}</p>
+                <p class="text-xl font-medium text-CinemaColorPelicula font-bebas"> {{ horario.doblaje }} </p>
+              </div>
+
+
+            </li>
+          </ul>
 
         </template>
       </cabecera>
@@ -93,6 +101,6 @@ import YouTubeItem from '../components/YouTubeItem.vue';
 }
 
 .pelicula-contenido {
-  @apply text-white p-4 my-4 bg-CinemaColorPelicula bg-opacity-60 font-roboto;
+  @apply text-white p-4 my-4 bg-CinemaColorPelicula bg-opacity-60 font-roboto shadow-xl shadow-CinemaColorPelicula;
 }
 </style>
