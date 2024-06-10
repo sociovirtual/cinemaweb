@@ -36,9 +36,12 @@
   li {
     @apply lg:mr-12;
     a {
-      @apply rounded text-gray-700 transition  font-bebas;
+      @apply rounded text-gray-700 transition  font-bebas text-xl;
       &:focus {
-        @apply outline-none ring-1 ring-blue-700 ring-offset-2 text-xl;
+        @apply outline-none ring-1 ring-blue-700 ring-offset-2 text-xl text-blue-700;
+      }
+      &:hover {
+        @apply text-CinemaNaranjo ring-CinemaNaranjo;
       }
     }
   }

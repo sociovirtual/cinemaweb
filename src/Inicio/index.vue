@@ -36,6 +36,7 @@ const { result, loading, error } = useQuery(PELICULAS_TODAS);
 
 <style scoped>
 .peliculas-lista {
-  @apply flex flex-wrap gap-4;
+  @apply flex flex-wrap gap-5 items-center;
+
 }
 </style>

@@ -12,15 +12,13 @@ const SEO_SITIO = {
   },
   keywords: {
     tag: "meta",
-    content:
-      "Wordpress, Chile, Hosting, Programacion ,Aseorias , Sitios , Webs , Bio Bio , Los Angeles ",
+    content: "x ",
   },
   copyright: {
     tag: "meta",
     content: "SocioVirtual.com 2024",
   },
-  description:
-    "Páginas web económicas. En diseño web somos conscientes, Sitios web básicos pero de excelente calidad, con diseño 100% a medida, especial para iniciar.",
+  description: " Cinema Web ",
   htmlAttrs: {
     lang: "es",
     amp: false,
@@ -29,16 +27,14 @@ const SEO_SITIO = {
     locale: "es_ES",
     type: "website",
     title: "SocioVirtual SPA - Páginas web económicas y calidad",
-    description:
-      "Solucionamos problemas. Sitios web básicos pero de excelente calidad, con diseño a medida.",
+    description: "Cinema web",
     url: "http://www.sociovirtual.com",
     site_name: "SocioVirtual - Servicios de Programacion y asesorias ",
     image: "https:sociovirtual.com/final-logo.png",
   },
   twitter: {
     title: "SocioVirtual SPA - Páginas web económicas y calidad",
-    description:
-      "Solucionamos problemas. Sitios web básicos pero de excelente calidad, con diseño a medida.",
+    description: "Cinema web",
     card: "summary_large_image",
     creator: "@sociovirtualspa",
     image: "https:sociovirtual.com/final-logo.png",

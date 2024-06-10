@@ -1,9 +1,12 @@
 <template>
-  <li>
+  <li class="pelicula-item">
     <h2 class="pelicula-item-titulo"> {{ pelicula.node.cinemaTutulo }} </h2>
     <a :href="'pelicula/' + pelicula.node.cinemaSlug">
       <img :src="pelicula.node.cinemaPoster" :alt=pelicula.node.cinemaTitulo class="pelicula-item-imagen" />
     </a>
+    <div class="pelicula-item-duracion pelicula-marco" v-html="pelicula.node.cinemaDuracion"></div>
+    <div class="pelicula-item-clasificacion pelicula-marco" v-html="pelicula.node.cinemaClasificacionPublico"></div>
+    <div class="pelicula-item-fecha pelicula-marco" v-html="pelicula.node.cinemaFechaDesde"></div>
   </li>
 </template>
 
@@ -21,11 +24,37 @@ export default {
 
 <style scoped>
 /* Aquí puedes añadir estilos específicos para este componente */
+
+.pelicula-item {
+  @apply scale-100 duration-100 relative;
+
+  &:hover {
+    @apply scale-105;
+  }
+}
+
 .pelicula-item-imagen {
-  @apply w-56;
+  @apply relative w-60 top-0;
 }
 
 .pelicula-item-titulo {
   @apply font-bebas text-2xl;
+}
+
+.pelicula-marco {
+  @apply m-2 px-2 py-1 border border-white shadow-sm shadow-white text-white font-bold backdrop-blur-sm;
+}
+
+.pelicula-item-duracion {
+  @apply absolute top-0;
+}
+
+.pelicula-item-clasificacion {
+  @apply absolute top-0 right-0;
+  ;
+}
+
+.pelicula-item-fecha {
+  @apply absolute bottom-0 right-0;
 }
 </style>
