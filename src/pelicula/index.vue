@@ -23,27 +23,33 @@
               Comprar Entrada</button>
           </div>
 
-          <YouTubeItem :cinemaTrailerThumbnail=result.peliculaBy.cinemaTrailerThumbnail
-            :cinemaTrailerId="result.peliculaBy.cinemaTrailerId" />
 
-          <ul class="flex flex-wrap gap-4 my-8">
-            <li v-for="(horario, index) in result.peliculaBy.cinemaHorarios" :key="index">
-
-              <div
-                class="flex flex-col items-center rounded-lg bg-gray-100 px-4 py-2 border border-CinemaColorPelicula hover:scale-125 ">
-                <p class="text-xl font-medium text-CinemaColorPelicula  font-alpha ">{{ horario.formato }}</p>
-                <p class="text-3xl font-bold text-CinemaColorPelicula ">{{ horario.hora }}</p>
-                <p class="text-xl font-medium text-CinemaColorPelicula font-bebas"> {{ horario.doblaje }} </p>
-              </div>
-
-
-            </li>
-          </ul>
 
         </template>
       </cabecera>
-    </div>
 
+      <div class="mx-auto px-4 py-8 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8 lg:py-10 flex gap-10">
+
+
+        <YouTubeItem :cinemaTrailerThumbnail=result.peliculaBy.cinemaTrailerThumbnail
+          :cinemaTrailerId="result.peliculaBy.cinemaTrailerId" />
+
+        <ul class="flex flex-wrap gap-4 my-8">
+          <li v-for="(horario, index) in result.peliculaBy.cinemaHorarios" :key="index">
+
+            <div
+              class="flex flex-col items-center rounded-lg bg-gray-100 px-4 py-2 border border-CinemaColorPelicula hover:scale-125 ">
+              <p class="text-xl font-medium text-CinemaColorPelicula  font-alpha ">{{ horario.formato }}</p>
+              <p class="text-3xl font-bold text-CinemaColorPelicula ">{{ horario.hora }}</p>
+              <p class="text-xl font-medium text-CinemaColorPelicula font-bebas"> {{ horario.doblaje }} </p>
+            </div>
+
+
+          </li>
+        </ul>
+
+      </div>
+    </div>
 
   </div>
 </template>

@@ -1,13 +1,17 @@
 <template>
-  <div>
-    <p>This is the child component.</p>
-    <slot>
+
+  <main class=" contents">
+    <slot name="cuerpo">
       <p>Fallback Content</p>
     </slot>
-  </div>
+  </main>
+
+
 </template>
 
 <script setup>
+
+
 </script>
 
 <style scoped></style>

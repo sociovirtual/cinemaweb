@@ -2,7 +2,7 @@
   <div>
     <Canonical></Canonical>
 
-    <div>
+    <div class=" max-w-screen-xl mx-auto ">
       <!-- <div class="mensaje-cargando" v-if="loading">Cargando...</div>
       <div class="mensaje-error" v-else-if="error">Error: {{ error.message }}</div> -->
       <div v-if="result">
