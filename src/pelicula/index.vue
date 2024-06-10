@@ -19,7 +19,7 @@
           <div class="pelicula-detalles">
             <div class="calificacion"> {{ result.peliculaBy.cinemaClasificacionPublico }} </div>
             <div class="duracion"> {{ result.peliculaBy.cinemaDuracion }} min </div>
-            <button class=" pelicula-boton   bg-blue-600  text-white focus:bg-blue-700  hover:bg-blue-700 ">
+            <button class=" cinemaboton   bg-blue-600  text-white focus:bg-blue-700  hover:bg-blue-700 ">
               Comprar Entrada</button>
           </div>
 

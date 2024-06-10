@@ -2,15 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-.basico {
-  @apply font-bebas underline text-4xl;
-  .basicodos {
-    @apply text-2xl;
+/* utliles */
+
+.cinemaboton {
+  @apply font-alpha whitespace-nowrap rounded-xl bg-blue-700 px-5 py-3 font-medium text-white transition-all duration-200;
+  &:hover {
+    @apply scale-105;
   }
 }
 
-.texto-carga {
+.mensaje-cargando {
   @apply text-3xl font-alpha text-center mt-10 animate-pulse;
+}
+.mensaje-error {
+  @apply text-xl text-red-800 font-bebas;
 }
 
 .scale-enter-active,
@@ -24,10 +29,26 @@
   transform: scale(0.9);
 }
 
-.mensaje-cargando {
-  @apply text-4xl font-alpha;
+/* cinema Menu  */
+
+.cinema-menu {
+  @apply flex w-full flex-col items-center space-y-2 lg:flex-row lg:justify-center lg:space-y-0;
+  li {
+    @apply lg:mr-12;
+    a {
+      @apply rounded text-gray-700 transition  font-bebas;
+      &:focus {
+        @apply outline-none ring-1 ring-blue-700 ring-offset-2 text-xl;
+      }
+    }
+  }
 }
 
-.mensaje-error {
-  @apply text-xl text-red-800 font-bebas;
+.cinema-menutwo {
+  a {
+    @apply whitespace-nowrap rounded font-medium transition-all duration-200 focus:outline-none focus:ring-1 focus:ring-blue-700 focus:ring-offset-2 hover:text-opacity-50;
+  }
+  /* .boton {
+    @apply;
+  } */
 }

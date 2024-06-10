@@ -3,7 +3,23 @@
     <template v-slot:title="{ content }">{{ content }} </template>
   </metainfo>
 
-  <LayoutHeader> </LayoutHeader>
+  <LayoutHeader>
+    <template #menu>
+      <ul class="cinema-menu">
+        <li>
+          <RouterLink to="/">Inicio</RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/contacto">Contacto</RouterLink>
+        </li>
+      </ul>
+    </template>
+    <template #menutwo>
+      <!-- <a href="http://" target="_blank" rel="noopener noreferrer"> Login </a> -->
+      <a href="http://" target="_blank" rel="noopener noreferrer" class="cinemaboton"> Comprar Entrada </a>
+    </template>
+
+  </LayoutHeader>
 
   <LayoutCinema>
 
