@@ -9,15 +9,15 @@
       <div class=" relative">
         <img :src=item.cinemaFondo :alt=item.cinemaTitulo class=" absolute inset-0 h-full w-full object-cover " />
 
-        <div class="relative bg-CinemaColorPelicula bg-opacity-40 ">
+        <div class="relative ">
 
 
 
           <div class=" h-[30rem] w-[80rem] ">
-            <h1 v-html="item.cinemaTitulo" class=" text-4xl "> </h1>
+            <!-- <h1 v-html="item.cinemaTitulo" class=" text-4xl "> </h1>
             <div> {{ item.cinemaFechaDesde }}</div>
             <div> {{ item.cinemaDuracion }} Min</div>
-            <div> {{ item.cinemaClasificacionPublico }}</div>
+            <div> {{ item.cinemaClasificacionPublico }}</div> -->
           </div>
         </div>
       </div>

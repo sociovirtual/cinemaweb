@@ -23,22 +23,12 @@
 
     <div class=" max-w-screen-xl mx-auto ">
 
-      <h2>En Cartelera</h2>
-      <ul class="peliculas-lista">
-        <PeliculaItem v-for="(pelicula, index) in enCartelera" :key="index" :pelicula="pelicula" />
-      </ul>
+      <PeliculaItem :peliculas="enCartelera" TituloH2=" En Cartelera" />
 
-      <h2>Próximos Estrenos</h2>
-      <ul class="peliculas-lista">
-        <PeliculaItem v-for="(pelicula, index) in proximosEstrenos" :key="index" :pelicula="pelicula" />
-      </ul>
+      <PeliculaItem :peliculas="proximosEstrenos" TituloH2=" Próximos Estrenos " />
 
+      <PeliculaItem :peliculas="enPreVenta" TituloH2=" Pre Venta " />
 
-      <h2>Pre Venta</h2>
-
-      <ul class="peliculas-lista">
-        <PeliculaItem v-for="(pelicula, index) in enPreVenta" :key="index" :pelicula="pelicula" />
-      </ul>
     </div>
 
 
@@ -81,9 +71,4 @@ const enPreVenta = computed(() => {
 
 </script>
 
-<style scoped>
-.peliculas-lista {
-  @apply flex flex-wrap gap-5 items-center;
-
-}
-</style>
+<style scoped></style>

@@ -51,11 +51,16 @@
       </div>
     </div>
 
+    <!--  en cartelera  -->
+    <div class=" max-w-screen-xl mx-auto ">
+      <PeliculaItem :peliculas="enCartelera" TituloH2=" En Cartelera " />
+    </div>
+
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 import { useRoute } from 'vue-router';
 import { GET_PELICULA } from './graphql.js'
 import { useQuery } from '@vue/apollo-composable'
@@ -70,6 +75,17 @@ import cabecera from './layouts/cabecera.vue';
 
 //cargando youtube 
 import YouTubeItem from '../components/YouTubeItem.vue';
+
+// // en cartelera
+import { PELICULAS_TODAS } from '../Inicio/graphql.js'
+import PeliculaItem from '../components/PeliculaItem.vue';
+
+const { result: resultCartelera, loading: loadingCartelera, error: errorCartelera } = useQuery(PELICULAS_TODAS);
+
+const enCartelera = computed(() => {
+  return resultCartelera.value?.peliculas.nodes.filter(pelicula => pelicula.cinemaCartelera) || [];
+});
+
 
 </script>
 
@@ -102,9 +118,6 @@ import YouTubeItem from '../components/YouTubeItem.vue';
   @apply shrink-0 rounded-full px-8 py-3 font-bebas text-2xl shadow shadow-CinemaColorPelicula focus:outline-none;
 }
 
-.pelicula-titulo {
-  @apply text-6xl text-white font-bebas;
-}
 
 .pelicula-contenido {
   @apply text-white p-4 my-4 bg-CinemaColorPelicula bg-opacity-60 font-roboto shadow-xl shadow-CinemaColorPelicula;
