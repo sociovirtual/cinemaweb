@@ -1,12 +1,12 @@
 <template>
   <li class="pelicula-item">
-    <h2 class="pelicula-item-titulo"> {{ pelicula.node.cinemaTutulo }} </h2>
-    <a :href="'pelicula/' + pelicula.node.cinemaSlug">
-      <img :src="pelicula.node.cinemaPoster" :alt=pelicula.node.cinemaTitulo class="pelicula-item-imagen" />
+    <!-- <h2 class="pelicula-item-titulo"> {{ pelicula.cinemaTitulo }} </h2> -->
+    <a :href="'pelicula/' + pelicula.cinemaSlug">
+      <img :src="pelicula.cinemaPoster" :alt=pelicula.cinemaTitulo class="pelicula-item-imagen" />
     </a>
-    <div class="pelicula-item-duracion pelicula-marco" v-html="pelicula.node.cinemaDuracion"></div>
-    <div class="pelicula-item-clasificacion pelicula-marco" v-html="pelicula.node.cinemaClasificacionPublico"></div>
-    <div class="pelicula-item-fecha pelicula-marco" v-html="pelicula.node.cinemaFechaDesde"></div>
+    <div class="pelicula-item-duracion pelicula-marco" v-html="pelicula.cinemaDuracion"></div>
+    <div class="pelicula-item-clasificacion pelicula-marco" v-html="pelicula.cinemaClasificacionPublico"></div>
+    <div class="pelicula-item-fecha pelicula-marco" v-html="pelicula.cinemaFechaDesde"></div>
   </li>
 </template>
 

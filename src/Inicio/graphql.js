@@ -1,20 +1,19 @@
 import gql from "graphql-tag";
 
 const PELICULAS_TODAS = gql`
-  query movie {
+  query MyQuery2 {
     peliculas {
-      edges {
-        node {
-          id
-          cinemaClasificacionPublico
-          cinemaDuracion
-          cinemaFechaDesde
-          cinemaPoster(size: "large")
-          cinemaSlug
-          cinemaTitulo
-          slug
-          title(format: RENDERED)
-        }
+      nodes {
+        cinameProximoEstreno
+        cinemaCartelera
+        cinemaClasificacionPublico
+        cinemaDuracion
+        cinemaFechaDesde
+        cinemaFondo
+        cinemaPoster
+        cinemaPreVenta
+        cinemaSlug
+        cinemaTitulo
       }
     }
   }
