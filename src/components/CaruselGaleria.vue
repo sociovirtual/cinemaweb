@@ -71,7 +71,7 @@ const slideTo = (index) => {
 .carousel__prev,
 .carousel__next {
   svg {
-    @apply text-white shadow shadow-lg;
+    @apply text-white shadow-lg;
   }
 }
 </style>
