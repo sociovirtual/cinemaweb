@@ -18,10 +18,12 @@ Este sitio web es una plataforma de cine que muestra películas actualmente en c
 Para instalar y configurar este sitio web en tu propio servidor, sigue los pasos detallados en la sección de instalación del repositorio del plugin [cinema para WordPress](https://github.com/sociovirtual/cinema).
 
 ## Contribuciones
-Las contribuciones son bienvenidas. Si deseas contribuir al proyecto, por favor revisa las [pautas de contribución](LINK_A_TU_ARCHIVO_DE_CONTRIBUCION).
+Las contribuciones son bienvenidas. Si deseas contribuir al proyecto.
 
 ## Licencia
-Este proyecto está licenciado bajo la Licencia XYZ - ver el archivo [LICENSE.md](LINK_A_TU_ARCHIVO_DE_LICENCIA) para más detalles.
+Este proyecto está licenciado bajo la misma licencia que WordPress, que es la [Licencia Pública General de GNU (GPLv2 o posterior)](https://es.wordpress.org/about/license/). Esto significa que puedes usar, modificar y distribuir este software libremente bajo los términos de dicha licencia.
+
+Para más detalles sobre la licencia, puedes consultar el archivo `LICENSE` incluido en el directorio raíz de WordPress o visitar el enlace proporcionado.
 
 ---
 
