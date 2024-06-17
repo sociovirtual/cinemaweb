@@ -4,19 +4,19 @@
 
     <div class=" max-w-screen-xl mx-auto pb-10">
 
-
-      <Carousel id="galleria" :items-to-show="1" :wrap-around="false" v-model="currentSlide">
+      <CaruselGaleria :items=enCartelera />
+      <!-- <Carousel id="galleria" :items-to-show="1" :wrap-around="false" v-model="currentSlide">
         <Slide v-for="pelicula in enCartelera" :key="pelicula">
           <CaruselGaleria :item=pelicula />
         </Slide>
-      </Carousel>
+      </Carousel> -->
 
-      <Carousel id="thumbnails" :items-to-show="5" :wrap-around="true" v-model="currentSlide" ref="carousel">
+      <!-- <Carousel id="thumbnails" :items-to-show="5" :wrap-around="true" v-model="currentSlide" ref="carousel">
         <Slide v-for="slide in 5" :key="slide">
           <div class="carousel__item w-full h-40 bg-slate-400 cursor-pointer" @click="slideTo(slide - 1)">{{ slide }}
           </div>
         </Slide>
-      </Carousel>
+      </Carousel> -->
 
 
     </div>
@@ -77,19 +77,7 @@ const enPreVenta = computed(() => {
 });
 
 
-// carusel
 
-import 'vue3-carousel/dist/carousel.css'
-import { Carousel, Slide } from 'vue3-carousel'
-
-const currentSlide = ref(0)
-const carousel = ref(null)
-
-const slideTo = (index) => {
-  if (carousel.value) {
-    carousel.value.slideTo(index)
-  }
-}
 
 </script>
 
