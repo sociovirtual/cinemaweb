@@ -3,22 +3,22 @@
 
     <!-- <div class="mensaje-cargando" v-if="loading">Cargando...</div>
     <div class="mensaje-error" v-else-if="error">Error: {{ error.message }}</div> -->
-    <div v-if="result">
+    <div v-if="resultPelicula">
       <cabecera>
         <template #fondo>
-          <img :src="result.peliculaBy.cinemaFondo" alt="Imagen de Fondo" class="pelicula-fondo">
+          <img :src="resultPelicula.peliculaBy.cinemaFondo" alt="Imagen de Fondo" class="pelicula-fondo">
         </template>
         <template #poster>
-          <img :src="result.peliculaBy.cinemaPoster" alt="Imagen del Poster" class="pelicula-poster">
+          <img :src="resultPelicula.peliculaBy.cinemaPoster" alt="Imagen del Poster" class="pelicula-poster">
         </template>
         <template #contenido>
-          <h1 class="pelicula-titulo">{{ result.peliculaBy.cinemaTitulo }} </h1>
+          <h1 class="pelicula-titulo">{{ resultPelicula.peliculaBy.cinemaTitulo }} </h1>
 
-          <div class="pelicula-contenido" v-html="result.peliculaBy.content"></div>
+          <div class="pelicula-contenido" v-html="resultPelicula.peliculaBy.content"></div>
 
           <div class="pelicula-detalles">
-            <div class="calificacion"> {{ result.peliculaBy.cinemaClasificacionPublico }} </div>
-            <div class="duracion"> {{ result.peliculaBy.cinemaDuracion }} min </div>
+            <div class="calificacion"> {{ resultPelicula.peliculaBy.cinemaClasificacionPublico }} </div>
+            <div class="duracion"> {{ resultPelicula.peliculaBy.cinemaDuracion }} min </div>
             <button class=" cinemaboton   bg-blue-600  text-white focus:bg-blue-700  hover:bg-blue-700 ">
               Comprar Entrada</button>
           </div>
@@ -31,11 +31,11 @@
       <div class="mx-auto px-4 py-8 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8 lg:py-10 flex gap-10">
 
 
-        <YouTubeItem :cinemaTrailerThumbnail=result.peliculaBy.cinemaTrailerThumbnail
-          :cinemaTrailerId="result.peliculaBy.cinemaTrailerId" />
+        <YouTubeItem :cinemaTrailerThumbnail=resultPelicula.peliculaBy.cinemaTrailerThumbnail
+          :cinemaTrailerId="resultPelicula.peliculaBy.cinemaTrailerId" />
 
         <ul class="flex flex-wrap gap-4 my-8">
-          <li v-for="(horario, index) in result.peliculaBy.cinemaHorarios" :key="index">
+          <li v-for="(horario, index) in resultPelicula.peliculaBy.cinemaHorarios" :key="index">
 
             <div
               class="flex flex-col items-center rounded-lg bg-gray-100 px-4 py-2 border border-CinemaColorPelicula hover:scale-125 ">
@@ -59,7 +59,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="js">
 import { computed, ref } from 'vue';
 import { useRoute } from 'vue-router';
 import { GET_PELICULA } from './graphql.js'
@@ -68,7 +68,7 @@ import { useQuery } from '@vue/apollo-composable'
 // obtener valores de la pelicula 
 const route = useRoute();
 const slug = ref(route.params.slug);
-const { result, loading, error } = useQuery(GET_PELICULA, { slug: slug.value });
+const { result: resultPelicula, loading: loadingPelicula, error: errorPelicula } = useQuery(GET_PELICULA, () => ({ slug: slug.value }));
 
 // creando layout
 import cabecera from './layouts/cabecera.vue';
@@ -89,7 +89,11 @@ const enCartelera = computed(() => {
 
 </script>
 
-<style scoped>
+<style>
+.pelicula-titulo {
+  @apply text-5xl text-white font-bold;
+}
+
 .pelicula-fondo {
   @apply absolute inset-0 h-full w-full object-cover;
 }

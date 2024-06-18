@@ -2,23 +2,9 @@
   <div>
     <Canonical></Canonical>
 
-    <div class=" max-w-screen-xl mx-auto pb-10">
+    <div class=" w-screen mx-auto pb-5">
 
-      <CaruselGaleria :items=enCartelera />
-      <!-- <Carousel id="galleria" :items-to-show="1" :wrap-around="false" v-model="currentSlide">
-        <Slide v-for="pelicula in enCartelera" :key="pelicula">
-          <CaruselGaleria :item=pelicula />
-        </Slide>
-      </Carousel> -->
-
-      <!-- <Carousel id="thumbnails" :items-to-show="5" :wrap-around="true" v-model="currentSlide" ref="carousel">
-        <Slide v-for="slide in 5" :key="slide">
-          <div class="carousel__item w-full h-40 bg-slate-400 cursor-pointer" @click="slideTo(slide - 1)">{{ slide }}
-          </div>
-        </Slide>
-      </Carousel> -->
-
-
+      <SwiperGaleria :items="enCartelera" />
     </div>
 
     <div class=" max-w-screen-xl mx-auto ">
@@ -40,8 +26,8 @@
 import { ref, computed } from 'vue';
 import Canonical from '../components/Canonical.vue';
 import PeliculaItem from '../components/PeliculaItem.vue';
-import CaruselGaleria from '../components/CaruselGaleria.vue';
-// import CaruselThumbs from '../components/CaruselThumbs.vue';
+// import CaruselGaleria from '../components/CaruselGaleria.vue';
+import SwiperGaleria from '../components/SwiperGaleria.vue';
 import { useMeta } from 'vue-meta';
 import { SEO_SITIO } from './seo.js';
 

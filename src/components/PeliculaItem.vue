@@ -40,7 +40,7 @@ export default {
 }
 
 .peliculas-lista {
-  @apply flex flex-wrap gap-5 items-center;
+  @apply flex flex-wrap gap-5 items-center mx-5;
 }
 
 .pelicula-titulo {

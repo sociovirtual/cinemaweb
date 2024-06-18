@@ -2,7 +2,8 @@
 
 
 
-  <Carousel id="galleria" :items-to-show="1" :wrap-around="true" v-model="currentSlide" :autoplay="3000">
+  <Carousel id="galleria" :items-to-show="1" :wrap-around="true" v-model="currentSlide" :autoplay="3000"
+    :snapAlign='center'>
     <Slide v-for="item in items" :key="item">
 
 
@@ -59,6 +60,20 @@ const slideTo = (index) => {
     carousel.value.slideTo(index)
   }
 }
+
+const breakpoints = {
+  // 700px and up
+  700: {
+    itemsToShow: 3.5,
+    snapAlign: 'center',
+  },
+  // 1024 and up
+  1024: {
+    itemsToShow: 5,
+    snapAlign: 'start',
+  },
+};
+
 
 
 </script>

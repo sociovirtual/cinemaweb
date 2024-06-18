@@ -12,11 +12,6 @@ const routes = [
     component: () => import("./Inicio/index.vue"),
   },
   {
-    path: "/hello",
-    name: "Hello",
-    component: () => import("./components/HelloWorld.vue"),
-  },
-  {
     path: "/pelicula/:slug",
     name: "Pelicula",
     component: () => import("./pelicula/index.vue"),
