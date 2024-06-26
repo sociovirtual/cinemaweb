@@ -17,8 +17,9 @@ Este sitio web es una plataforma de cine que muestra películas actualmente en c
 ## Instalación y Configuración
 Para instalar y configurar este sitio web en tu propio servidor, sigue los pasos detallados en la sección de instalación del repositorio del plugin [cinema para WordPress](https://github.com/sociovirtual/cinema).
 
-## Contribuciones
-Las contribuciones son bienvenidas. Si deseas contribuir al proyecto.
+## Contribución
+
+Si deseas contribuir al desarrollo de MisAnuncios, ¡estamos abiertos a colaboraciones! Si encuentras errores o tienes ideas para mejoras, no dudes en abrir un issue o enviar un pull request.
 
 ## Licencia
 Este proyecto está licenciado bajo la misma licencia que WordPress, que es la [Licencia Pública General de GNU (GPLv2 o posterior)](https://es.wordpress.org/about/license/). Esto significa que puedes usar, modificar y distribuir este software libremente bajo los términos de dicha licencia.
@@ -26,5 +27,3 @@ Este proyecto está licenciado bajo la misma licencia que WordPress, que es la [
 Para más detalles sobre la licencia, puedes consultar el archivo `LICENSE` incluido en el directorio raíz de WordPress o visitar el enlace proporcionado.
 
 ---
-
-Este archivo `README.md` es solo un ejemplo y puede ser personalizado según las necesidades específicas de tu proyecto.
