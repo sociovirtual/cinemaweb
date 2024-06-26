@@ -1,22 +1,44 @@
 import gql from "graphql-tag";
 
+// const PELICULAS_TODAS = gql`
+//   query MyQuery2 {
+//     peliculas {
+//       nodes {
+//         cinameProximoEstreno
+//         cinemaCartelera
+//         cinemaClasificacionPublico
+//         cinemaDuracion
+//         cinemaFechaDesde
+//         cinemaFondo
+//         cinemaPoster
+//         cinemaPreVenta
+//         cinemaSlug
+//         cinemaTitulo
+//       }
+//     }
+//   }
+// `;
+
 const PELICULAS_TODAS = gql`
-  query MyQuery2 {
-    peliculas {
+query peliculas {
+  carteleras {
       nodes {
-        cinameProximoEstreno
-        cinemaCartelera
-        cinemaClasificacionPublico
-        cinemaDuracion
-        cinemaFechaDesde
-        cinemaFondo
-        cinemaPoster
-        cinemaPreVenta
-        cinemaSlug
-        cinemaTitulo
+        id
+        carteleraClasificacion
+        carteleraFondo
+        carteleraPoster
+        carteleraTitulo
+        slug
+        title(format: RENDERED)
+        carteleraDuracion
+        carteleraFechaDesde
+        carteleraPreVenta
+        carteleraProximoEstreno
+        carteleraEnCartelera
       }
     }
   }
+
 `;
 
 export { PELICULAS_TODAS };

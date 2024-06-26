@@ -1,24 +1,22 @@
 <template>
   <div>
 
-    <!-- <div class="mensaje-cargando" v-if="loading">Cargando...</div>
-    <div class="mensaje-error" v-else-if="error">Error: {{ error.message }}</div> -->
     <div v-if="resultPelicula">
       <cabecera>
         <template #fondo>
-          <img :src="resultPelicula.peliculaBy.cinemaFondo" alt="Imagen de Fondo" class="pelicula-fondo">
+          <img :src="resultPelicula.carteleraBy.carteleraFondo" alt="Imagen de Fondo" class="pelicula-fondo">
         </template>
         <template #poster>
-          <img :src="resultPelicula.peliculaBy.cinemaPoster" alt="Imagen del Poster" class="pelicula-poster">
+          <img :src="resultPelicula.carteleraBy.carteleraPoster" alt="Imagen del Poster" class="pelicula-poster">
         </template>
         <template #contenido>
-          <h1 class="pelicula-titulo">{{ resultPelicula.peliculaBy.cinemaTitulo }} </h1>
+          <h1 class="pelicula-titulo">{{ resultPelicula.carteleraBy.carteleraTitulo }} </h1>
 
-          <div class="pelicula-contenido" v-html="resultPelicula.peliculaBy.content"></div>
+          <div class="pelicula-contenido" v-html="resultPelicula.carteleraBy.content"></div>
 
           <div class="pelicula-detalles">
-            <div class="calificacion"> {{ resultPelicula.peliculaBy.cinemaClasificacionPublico }} </div>
-            <div class="duracion"> {{ resultPelicula.peliculaBy.cinemaDuracion }} min </div>
+            <div class="calificacion"> {{ resultPelicula.carteleraBy.carteleraClasificacion }} </div>
+            <div class="duracion"> {{ resultPelicula.carteleraBy.carteleraDuracion }} min </div>
             <button class=" cinemaboton   bg-blue-600  text-white focus:bg-blue-700  hover:bg-blue-700 ">
               Comprar Entrada</button>
           </div>
@@ -31,11 +29,11 @@
       <div class="mx-auto px-4 py-8 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8 lg:py-10 flex gap-10">
 
 
-        <YouTubeItem :cinemaTrailerThumbnail=resultPelicula.peliculaBy.cinemaTrailerThumbnail
-          :cinemaTrailerId="resultPelicula.peliculaBy.cinemaTrailerId" />
+        <YouTubeItem :cinemaTrailerThumbnail=resultPelicula.carteleraBy.carteleraTrailerThumbnail
+          :cinemaTrailerId="resultPelicula.carteleraBy.carteleraTrailerId" />
 
         <ul class="flex flex-wrap gap-4 my-8">
-          <li v-for="(horario, index) in resultPelicula.peliculaBy.cinemaHorarios" :key="index">
+          <li v-for="(horario, index) in resultPelicula.carteleraBy.carteleraHorarios" :key="index">
 
             <div
               class="flex flex-col items-center rounded-lg bg-gray-100 px-4 py-2 border border-CinemaColorPelicula hover:scale-125 ">
@@ -83,7 +81,7 @@ import PeliculaItem from '../components/PeliculaItem.vue';
 const { result: resultCartelera, loading: loadingCartelera, error: errorCartelera } = useQuery(PELICULAS_TODAS);
 
 const enCartelera = computed(() => {
-  return resultCartelera.value?.peliculas.nodes.filter(pelicula => pelicula.cinemaCartelera) || [];
+  return resultCartelera.value?.carteleras.nodes.filter(cartelera => cartelera.carteleraEnCartelera) || [];
 });
 
 

@@ -3,7 +3,6 @@
     <Canonical></Canonical>
 
     <div class=" w-screen mx-auto pb-5">
-
       <SwiperGaleria :items="enCartelera" />
     </div>
 
@@ -41,15 +40,15 @@ const { result, loading, error } = useQuery(PELICULAS_TODAS);
 //!SECTION
 
 const proximosEstrenos = computed(() => {
-  return result.value?.peliculas.nodes.filter(pelicula => pelicula.cinameProximoEstreno) || [];
+  return result.value?.carteleras.nodes.filter(cartelera => cartelera.carteleraProximoEstreno) || [];
 });
 
 const enCartelera = computed(() => {
-  return result.value?.peliculas.nodes.filter(pelicula => pelicula.cinemaCartelera) || [];
+  return result.value?.carteleras.nodes.filter(cartelera => cartelera.carteleraEnCartelera) || [];
 });
 
 const enPreVenta = computed(() => {
-  return result.value?.peliculas.nodes.filter(pelicula => pelicula.cinemaPreVenta) || [];
+  return result.value?.carteleras.nodes.filter(cartelera => cartelera.carteleraPreVenta) || [];
 });
 
 

@@ -6,10 +6,10 @@
       class="mySwiper">
 
       <swiper-slide v-for="item in items" :key="item">
-
-        <img :src=item.cinemaFondo :alt=item.cinemaTitulo class=" absolute inset-0 h-full w-full object-cover "
+        <a :href="'/pelicula/' + item.slug">
+        <img :src=item.carteleraFondo :alt=item.carteleraTitulo class=" absolute inset-0 h-full w-full object-cover "
           loading="lazy" />
-
+        </a>
       </swiper-slide>
     </swiper>
   </div>

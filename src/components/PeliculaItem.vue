@@ -4,13 +4,13 @@
   <ul class="peliculas-lista">
 
     <li v-for="(pelicula, index) in peliculas" :key="index" class="pelicula-item">
-      <!-- <h2 class="pelicula-item-titulo"> {{ pelicula.cinemaTitulo }} </h2> -->
-      <a :href="'/pelicula/' + pelicula.cinemaSlug">
-        <img :src="pelicula.cinemaPoster" :alt=pelicula.cinemaTitulo class="pelicula-item-imagen" />
+      <!-- <h2 class="pelicula-item-titulo"> {{ pelicula.carteleraTitulo }} </h2> -->
+      <a :href="'/pelicula/' + pelicula.slug">
+        <img :src="pelicula.carteleraPoster" :alt=pelicula.carteleraTitulo class="pelicula-item-imagen" />
       </a>
-      <div class="pelicula-item-duracion pelicula-marco" v-html="pelicula.cinemaDuracion"></div>
-      <div class="pelicula-item-clasificacion pelicula-marco" v-html="pelicula.cinemaClasificacionPublico"></div>
-      <div class="pelicula-item-fecha pelicula-marco" v-html="pelicula.cinemaFechaDesde"></div>
+      <div class="pelicula-item-duracion pelicula-marco" v-html="pelicula.carteleraDuracion"></div>
+      <div class="pelicula-item-clasificacion pelicula-marco" v-html="pelicula.carteleraClasificacion"></div>
+      <div class="pelicula-item-fecha pelicula-marco" v-html="pelicula.carteleraFechaDesde"></div>
     </li>
 
   </ul>
@@ -56,7 +56,8 @@ export default {
 }
 
 .pelicula-item-imagen {
-  @apply relative w-60 top-0;
+  /* @apply relative w-60 top-0 border-CinemaGrisOscuro border ; */
+  @apply relative w-60 rounded-xl border-t-2 border-CinemaColorPelicula bg-CinemaColorPelicula shadow-2xl  shadow-CinemaColorPelicula;
 }
 
 .pelicula-item-titulo {
@@ -64,7 +65,7 @@ export default {
 }
 
 .pelicula-marco {
-  @apply m-2 px-2 py-1 border border-white shadow-sm shadow-white text-white font-bold backdrop-blur-sm;
+  @apply m-2 px-2 py-1 border border-CinemaGrisOscuro shadow-sm shadow-CinemaGrisOscuro text-CinemaGrisOscuro font-bold backdrop-contrast-50 ;
 }
 
 .pelicula-item-duracion {
@@ -72,7 +73,7 @@ export default {
 }
 
 .pelicula-item-clasificacion {
-  @apply absolute top-0 right-0;
+  @apply absolute top-0 right-0   ;
   ;
 }
 
